@@ -28,6 +28,14 @@ public class Apartment extends Space{
 		this.parkingSpaces = new HashMap<>();
 	}
 
+	public void addParkingSpace(ParkingSpace parkingSpace){
+		parkingSpaces.put(parkingSpace.getID(), parkingSpace);
+	}
+
+	public ParkingSpace getParkingSpace(String id){
+		return parkingSpaces.get(id);
+	}
+
 	public void checkIn(Person person) {
 		occupiedBy.add(person);
 	}

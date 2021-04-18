@@ -47,6 +47,10 @@ public class Person {
 		spacesRented++;
 	}
 
+	public void rentParkingSpace(ParkingSpace space, Apartment apartment){
+		apartment.addParkingSpace(space);
+	}
+
 	// Check in and check out self
 	public void checkIn(String id){
 		if (ownedApartments.containsKey(id)){
